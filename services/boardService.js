@@ -1,22 +1,17 @@
-var boardClass = require('../lib/Board');
-
-const STATUS = {
-  WIN: 'WIN',
-  LOOSE: 'LOOSE',
-  ERROR: 'ERROR',
-  BOARD_CHECKED: 'BOARD_CHECKED',
-  TIE: 'TIE',
-};
+const boardClass = require('../lib/Board');
+const STATUS = require('../status');
 
 let boardManager;
 
 module.exports = checkBoardStatus = (board) => {
 
-  if (!board || !board.length) return  {code: 500, status: STATUS.ERROR};
+  if (!board || !board.length || board.length !== 9) return  {code: 500, status: STATUS.ERROR};
 
   boardManager = new boardClass(board);
   const playerPositions = boardManager.getPlayerPositions('x');
   const computerPositions = boardManager.getPlayerPositions('c');
+
+  if (playerPositions.length - computerPositions.length > 1) return  {code: 500, status: STATUS.ERROR};
 
   //Check if player or computer has won
   if (hasPlayerWon(playerPositions)) return {code: 200, status: STATUS.WIN};
