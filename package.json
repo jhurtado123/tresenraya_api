@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "mocha --require babel-register tests/*.js --exit",
+    "test": "mocha test/*.js --exit",
     "start": "node ./bin/www"
   },
   "dependencies": {
