@@ -10,7 +10,6 @@ module.exports = getComputerNextMovement = (board) => {
 
   const canComputerWinIndex = boardManager.canPlayerWin(computerPositions);
   if (canComputerWinIndex !== false)  {
-    console.log('aa');
     return canComputerWinIndex;
   }
 
@@ -25,7 +24,6 @@ module.exports = getComputerNextMovement = (board) => {
 
   const canComputerContinueLineIndex = boardManager.canPlayerContinueLine(computerPositions);
   if (canComputerContinueLineIndex !== false) {
-    console.log(canComputerContinueLineIndex);
     return canComputerContinueLineIndex;
   }
 
