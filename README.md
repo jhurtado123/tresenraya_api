@@ -5,7 +5,7 @@ Para los tests se utiliza Mocha (v7.2) y Chai (v4.2)\
 Las rutas del proyecto se encuentran en el archivo index.js dentro de la carpeta routes.
 
 
-##Instalación
+## Instalación
 
 - Descargar el respositorio o clonarlo con git clone en la rama master (https://github.com/jhurtado123/tresenraya_api.git)
 - Instalar las dependencias ejecutando el comando `npm install` en la raíz del proyecto.
@@ -18,7 +18,7 @@ FRONTEND_DOMAIN=http://localhost:3000
 **Si de desea inciar el front end en otro puerto hay que indicarselo en la variable de entorno del servidor para evitar problemas relacionados con el CORS**
 
 
-##Rutas
+## Rutas
 | Ruta | Metodo | Función |
 | ------ | ------ | ------- |
 | computerMove | POST | Insertar en el tablero el próximo moviemiento del servidor
